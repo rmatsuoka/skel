@@ -1,2 +1,3 @@
 defflow off
 escape ^Qq
+maptimeout 5
