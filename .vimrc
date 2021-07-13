@@ -1,6 +1,6 @@
 " .vimrc
 set nocompatible
-set smartindent
+set autoindent
 
 set ignorecase
 set incsearch
