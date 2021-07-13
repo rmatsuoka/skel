@@ -1,3 +1,2 @@
-set compatible
-so $HOME/.exrc
+set nocompatible
 syntax on
