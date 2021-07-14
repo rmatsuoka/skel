@@ -1,15 +1,21 @@
 #!/bin/sh
 
-progname=$(basename $0)
+export IFS=' 	
+'
+syspath=$(command -p getconf PATH 2>/dev/null)
+export PATH="${syspath:-/bin:/usr/bin}${PATH:+:$PATH}"
+
+progname=INSTALL
 usage="./$progname [-f]"
+[ "X$0" = "X./$progname" ] || { echo "run ./$progname in its parent dir" >&2; exit 1; }
 
 exclude(){
 	# list files not to install
-	grep -v '\.git
-LICENSE
-README\.md
-INSTALL
-.*\.swp'
+	grep -v '^\.git$
+^LICENSE$
+^README\.md$
+^INSTALL$
+.*\.swp$'
 }
 
 displayHelp(){
