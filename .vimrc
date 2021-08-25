@@ -9,4 +9,6 @@ set noshowmatch
 set incsearch
 set hlsearch
 
-syntax on
+if has('syntax')
+	syntax on
+endif
