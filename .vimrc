@@ -11,4 +11,5 @@ set hlsearch
 
 if has('syntax')
 	syntax on
+	colorscheme default
 endif
