@@ -9,7 +9,7 @@ TARGET= \
 all:
 	@echo run make install
 
-install:
+install: $(TARGET)
 	for i in $(TARGET); \
 	do \
 		ln -sf $(PWD)/$$i $(PREFIX)/$$i; \
