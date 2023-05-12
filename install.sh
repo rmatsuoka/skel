@@ -62,8 +62,8 @@ main() {
 	lnall "$(pwd)/lib" "$libpath"
 
 	addcommand ~/.profile ". $libpath/profile.sh"
-	# zsh does not read ~/.proflie but bash does
-	addcommand ~/.zprofile ". $libpath/profile.sh"
+	# zsh does not read ~/.proflie so fouce to read it. bash reads it.
+	addcommand ~/.zprofile ". $HOME/.profile"
 
 	addcommand ~/.bashrc ". $libpath/rc.sh"
 	addcommand ~/.zshrc ". $libpath/rc.sh"
