@@ -22,7 +22,7 @@ addpath() {
 	[ -d "$p" ] || return 1
 
 	case "$PATH" in
-	"$p":*|*:"$p"|*:"$p":*) ;;
+	"$p":*|*:"$p"|*:"$p":*) :;;
 	*)
 		if [ true = "$eflag" ]
 		then
